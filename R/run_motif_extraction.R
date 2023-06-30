@@ -17,11 +17,6 @@ run_motif_extraction <- function(input_path, ncbi_bin, protein_ref){
   return(extracted_sequence)
 }
 
-input <- "/Users/jaxlub/Downloads/proteinInputfile.xlsx"
-NCBI <- "/Users/jaxlub/Downloads/ncbi-blast-2.14.0+/bin"
-ref_prot <- "/Users/jaxlub/Downloads/protein.faa"
-
-extracted_100 <- run_motif_extraction(input, NCBI, ref_prot)
 
 
 
