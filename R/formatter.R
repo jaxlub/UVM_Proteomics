@@ -2,16 +2,16 @@
 #'
 #' Parse and reformat input file to have only 1 row corresponding to 1 accession.
 #'
-#' @param x Data Sheet Path
+#' @param input_path Path to input file
 #'
 #' @return Reformatted Input File
 #'
 #' @export
 file_reformater <- function (input_path){
-  #table <- read.csv("data.csv")
-  expand <- table %>% filter(!is.na(Modifications.in.Master.Proteins)) %>% separate_rows(Modifications.in.Master.Proteins, sep="\\];")
-  expand <- expand %>% mutate(accession = str_replace_all(expand$Modifications.in.Master.Proteins, "(.*) .xPhospho \\[.(.*)\\(.*", "\\1"))
-  expand <- expand %>% mutate(midpoint = str_replace_all(expand$Modifications.in.Master.Proteins, "(.*) .xPhospho \\[.(.*)\\(.*", "\\2"))
+  table <- read_excel(input_path)
+  expand <- table %>% filter(!is.na('Modifications in Master Proteins')) %>% separate_rows('Modifications in Master Proteins', sep="\\];")
+  expand <- expand %>% mutate(accession = str_replace_all(expand$'Modifications in Master Proteins', "(.*) .xPhospho \\[.(.*)\\(.*", "\\1"))
+  expand <- expand %>% mutate(midpoint = str_replace_all(expand$'Modifications in Master Proteins', "(.*) .xPhospho \\[.(.*)\\(.*", "\\2"))
   expand <- replace(expand, expand=='', NA)
   expand <- expand %>% tidyr::fill(accession)
 
@@ -29,4 +29,6 @@ file_reformater <- function (input_path){
   expand <- suppressWarnings(expand %>% mutate(end = (as.numeric(midpoint) + 7)))
 
   expand <- expand %>% mutate(range = paste0(start, "-", end))
+
+  return(expand)
 }

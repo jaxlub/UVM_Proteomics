@@ -2,13 +2,12 @@
 #'
 #' Pulls protein sequence from database for given row
 #'
-#' @param x Numeric vector.
-#'
-#' @return Factor variable.
-#'
+#' @param query_row Row of interest
+#' @param db Path to Fasta refrence file
+#' @param ncbi_bin Path to ncbi-blast-2.14.0+/bin
 #'
 #' @export
-run_blastdbcmd <- function(query_row, db, ncbi_bin = ncbi_bin) {
+run_blastdbcmd <- function(query_row, db, ncbi_bin) {
 
   # Extract arguments
   accession <- query_row$accession
