@@ -8,7 +8,7 @@
 > data_pull_and_fill.R \
 > run_blastdbcmd.R 
 ___
-This package is built for the Proteomics core of the VBRN located at the University of Vermont. Currently this package functions to pull the 7 residues before and after given protein accessions and phosphosites of interest from core data input using an NCBI Blast database. For this function, the input file must have an "accession"" column and "Modifications in Master Proteins" column. Moving forward, other functionalities are in the pipeline to further assist the proteomics department as needed.
+This package is built for the Proteomics core of the VBRN located at the University of Vermont. Currently this package functions to pull the 7 residues before and after given protein accessions and phosphosites of interest from core data input using an NCBI Blast database. For this function, the input file must have an "accession"" column and "Modifications in Master Proteins" column. If a proteins phosphosite of interest is within 7 sequences of the beginning or end, then the empty spots are filled with 'X' to fill the 15 sequence range. Moving forward, other functionalities are in the pipeline to further assist the proteomics department as needed.
 ___
 ### Installation
 Package can be installed from github via 
