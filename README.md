@@ -8,9 +8,8 @@
 > data_pull_and_fill.R \
 > run_blastdbcmd.R 
 ___
-This package is built for the Proteomics core of the VBRN located at the University of Vermont. Currently this package functions to pull the 7 residues before and after given protein accessions and phosphosites of interest from core data input using an NCBI Blast database. Moving forward, other functionalities are in the pipeline to further assist the proteomics department as needed. 
+This package is built for the Proteomics core of the VBRN located at the University of Vermont. Currently this package functions to pull the 7 residues before and after given protein accessions and phosphosites of interest from core data input using an NCBI Blast database. For this function, the input file must have an "accession"" column and "Modifications in Master Proteins" column. Moving forward, other functionalities are in the pipeline to further assist the proteomics department as needed.
 ___
-
 ### Installation
 Package can be installed from github via 
 ```R
@@ -24,7 +23,6 @@ source <- devtools:::source_pkg("path/to/package")
 install(source)
 ```
 ___
-
 ### Parameters
 This program has 3 parameters.
 1. The path to the data file
