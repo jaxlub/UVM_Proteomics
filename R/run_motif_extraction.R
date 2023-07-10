@@ -16,5 +16,5 @@ run_motif_extraction <- function(input_path, output_path, ncbi_bin, protein_ref,
   formatted <- file_reformater(input_path, num)
   extracted_sequence <- data_pull_and_fill(formatted, protein_ref, ncbi_bin, num)
   return(extracted_sequence)
-  write_excel(extracted_sequence, output_path)
+  write.csv(extracted_sequence, output_path)
 }

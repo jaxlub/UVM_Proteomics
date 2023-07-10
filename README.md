@@ -56,7 +56,7 @@ __SXXX__ indicates the modified amino acid (in this case the phosphorylated amin
 5. The number of amino acids on either side of the modified amino acid to extract from the Master protein (default is num=7)
 
 ### The output  
-- an .xlsx file with additional columns
+- an .csv file with additional columns
    - accession
    - start
    - end
@@ -75,8 +75,8 @@ ncbi_bin <- "/Applications/ncbi-blast-2.14.0+/bin"
 input_path <- "/Users/eguswa/Documents/Open_UVM_Projects/Proteomics_core/Peptide_extraction/May222023_Eclipse_2022_138_unnormalized_peptideIsoforms_Bioinformatics.xlsx"
 
 #output path
-out_dir_path <- "/Users/eguswa/Documents/Open_UVM_Projects/Proteomics_core/Peptide_extraction/May222023_Eclipse_2022_138_with_extracted_sequence.xlsx"
+out_dir_path <- "/Users/eguswa/Documents/Open_UVM_Projects/Proteomics_core/Peptide_extraction/May222023_Eclipse_2022_138_with_extracted_sequence.csv"
 
 
-run_motif_extraction(input_path, output_path, ncbi_bin, protein_ref)
+run_motif_extraction(input_path, output_path, ncbi_bin, ref_protein)
 ```
