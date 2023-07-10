@@ -7,7 +7,6 @@
 #'
 #' @export
 build_blastdb <- function(ref_protein, ncbi_bin){
-  ncbi_bin <- "/Users/jaxlub/Downloads/ncbi-blast-2.14.0+/bin"
   makeblastdb <- file.path(ncbi_bin, 'makeblastdb')
 
    system2(makeblastdb,
