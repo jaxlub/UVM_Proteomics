@@ -20,8 +20,8 @@ install_github("UVM_Proteomics",username="jaxlub")
 Another download option is to download a zip file from github, unzip it and then run
 ```R
 install.packages("devtools")
-devtools::install_github("jaxlub/UVM_Proteomics", build_vignettes = FALSE)
-library(UVMProteomics)
+source <- devtools:::source_pkg("path/to/package")
+install(source)
 ```
 
 ## Motif Extraction
