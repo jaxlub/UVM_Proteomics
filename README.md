@@ -15,7 +15,7 @@ This is a R package for the [UVM - VBRN Proteomics Core](https://vbrn.org/proteo
 Package can be installed from github via
 ```R
 install.packages("devtools")
-install_github("UVM_Proteomics",username="jaxlub")
+devtools::install_github("UVM_Proteomics",username="jaxlub")
 ```
 Another download option is to download a zip file from github, unzip it and then run
 ```R
