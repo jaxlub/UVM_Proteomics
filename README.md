@@ -26,7 +26,7 @@ install(source)
 
 ## Motif Extraction
 
-This function extracts predetermined protein motifs from a master protein in a user specified proteome (e.g. [uniProt mouse proteome](https://www.uniprot.org/proteomes?facets=proteome_type:1&query=(organism_id:10090)]. The function identifies the position of the modified amino acid(s) in a master protein, and uses that information as a midpoint to calculate the position range of amino acids in a motif. The blast+ suite is then used to search a proteome and extract the motifs. To do this, a user defined proteome is converted to a blast searchable database (using makeblastdb). The master protein accession is used to search the database (using blastdbcmd), and if present the motif determined by the range calculated above is extracted and appended to the xlsx table.
+This function extracts predetermined protein motifs from a master protein in a user specified proteome (e.g. [uniProt mouse proteome](https://www.uniprot.org/proteomes?facets=proteome_type:1&query=(organism_id:10090)). The function identifies the position of the modified amino acid(s) in a master protein, and uses that information as a midpoint to calculate the position range of amino acids in a motif. The blast+ suite is then used to search a proteome and extract the motifs. To do this, a user defined proteome is converted to a blast searchable database (using makeblastdb). The master protein accession is used to search the database (using blastdbcmd), and if present the motif determined by the range calculated above is extracted and appended to the xlsx table.
 
 If multiple master proteins or multiple modified amino acids are identified for a given row of input data, this function will separate that data to search a single master protein / modification at a time resulting in a greater number of rows in the data set.
 
@@ -38,7 +38,6 @@ formatter.R
 data_pull_and_fill.R
 run_blastdbcmd.R
 ```
-
 
 ### Parameters
 This program has 5 parameters.
@@ -66,7 +65,6 @@ __SXXX__ indicates the modified amino acid (in this case the phosphorylated amin
 
 ### Example usage
 ```
-#
 #path to the protein sequence for the reference database
 ref_protein <- "/Users/eguswa/Documents/Open_UVM_Projects/Proteomics_core/Mouse_ref/protein.faa"
 
