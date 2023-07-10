@@ -15,6 +15,6 @@ run_motif_extraction <- function(input_path, output_path, ncbi_bin, protein_ref,
   build_blastdb(protein_ref, ncbi_bin)
   formatted <- file_reformater(input_path, num)
   extracted_sequence <- data_pull_and_fill(formatted, protein_ref, ncbi_bin, num)
-  return(extracted_sequence)
   write.csv(extracted_sequence, output_path)
+  return(extracted_sequence)
 }
