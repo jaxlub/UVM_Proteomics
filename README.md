@@ -14,10 +14,13 @@ Research reported in this repository was supported by an Institutional Developme
 This is a R package for the [UVM - VBRN Proteomics Core](https://vbrn.org/proteomics/).  It includes functions for three main types of analyses: Post Translational Modification, Spectral Counting, and Protein Expression.
 
 ***Currently Supports or In Development***
+
 Post Translational Modification:
   - Motif Analysis
+    
 Spectral Counting:
   - Differential protein expression (DEqMS)
+    
 Protein Expression:
   - Pathway Analysis
   - functional classification
