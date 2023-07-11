@@ -1,6 +1,6 @@
-![VBRN Logo](/logo_landscape.png)
+# [UVM Proteomics](https://vbrn.org/proteomics/)
 
-# UVM_Proteomics
+![VBRN Logo](/logo_landscape.png)
 
 ### Authors
 [Emily Curd](https://scholar.google.com/citations?user=uGHWHbgAAAAJ&hl=en&oi=ao) and James (Jax) Lubkowitz
