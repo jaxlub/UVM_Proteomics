@@ -2,8 +2,8 @@
 #'
 #' Generated blast database from NCBI
 #'
-#' @param x Protein Sequence for the Reference Database
 #' @param ref_protein Path to Fasta refrence file
+#' @param ncbi_bin Path to ncbi-blast-2.14.0+/bin
 #'
 #' @export
 build_blastdb <- function(ref_protein, ncbi_bin){
