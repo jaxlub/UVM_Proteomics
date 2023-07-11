@@ -1,4 +1,4 @@
-![VBRN Logo](main/logo_landscape.png)
+![VBRN Logo](/logo_landscape.png)
 
 # UVM_Proteomics
 
