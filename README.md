@@ -1,3 +1,5 @@
+![VBRN Logo](main/logo_landscape.png)
+
 # UVM_Proteomics
 
 ### Authors
@@ -9,7 +11,16 @@
 ### Funding
 Research reported in this repository was supported by an Institutional Development Award (IDeA) from the National Institute of General Medical Sciences of the National Institutes of Health under grant number P20GM103449. Its contents are solely the responsibility of the authors and do not necessarily represent the official views of NIGMS or NIH.
 
-This is a R package for the [UVM - VBRN Proteomics Core](https://vbrn.org/proteomics/).  It includes functions for three main types of analyses: [motif extraction](#Motif_Extraction), differential protein expression, and pathway analysis.
+This is a R package for the [UVM - VBRN Proteomics Core](https://vbrn.org/proteomics/).  It includes functions for three main types of analyses: Post Translational Modification, Spectral Counting, and Protein Expression.
+
+***Currently Supports or In Development***
+Post Translational Modification:
+  - Motif Analysis
+Spectral Counting:
+  - Differential protein expression (DEqMS)
+Protein Expression:
+  - Pathway Analysis
+  - functional classification
 
 ### Installation
 Package can be installed from github via
@@ -23,6 +34,8 @@ install.packages("devtools")
 source <- devtools:::source_pkg("path/to/package")
 install(source)
 ```
+
+# Post Translational Modification
 
 ## Motif Extraction
 
