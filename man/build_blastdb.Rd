@@ -9,7 +9,7 @@ build_blastdb(ref_protein, ncbi_bin)
 \arguments{
 \item{ref_protein}{Path to Fasta refrence file}
 
-\item{x}{Protein Sequence for the Reference Database}
+\item{ncbi_bin}{Path to ncbi-blast-2.14.0+/bin}
 }
 \description{
 Generated blast database from NCBI
