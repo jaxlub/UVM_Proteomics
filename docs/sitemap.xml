@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>/404.html</loc>
+  </url>
+  <url>
+    <loc>/authors.html</loc>
+  </url>
+  <url>
+    <loc>/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/UVMProteomics.html</loc>
+  </url>
+  <url>
+    <loc>/reference/build_blastdb.html</loc>
+  </url>
+  <url>
+    <loc>/reference/data_pull_and_fill.html</loc>
+  </url>
+  <url>
+    <loc>/reference/file_reformater.html</loc>
+  </url>
+  <url>
+    <loc>/reference/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/run_blastdbcmd.html</loc>
+  </url>
+  <url>
+    <loc>/reference/run_motif_extraction.html</loc>
+  </url>
+</urlset>

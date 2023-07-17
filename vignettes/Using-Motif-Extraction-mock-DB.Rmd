@@ -1,0 +1,40 @@
+---
+title: "Using-Motif-Extraction-mock-DB"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using-Motif-Extraction-mock-DB}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(UVMProteomics)
+```
+
+> This document will only work if NCBI Blast+ is installed. 
+
+```{r}
+# Create a temp output directory
+output_directory_path_top <- tempdir()
+output_directory_path <- file.path(output_directory_path_top, 'Motif Extraction Test')
+dir.create(output_directory_path, showWarnings = FALSE)
+
+# Path to the protein sequence for the reference mouse database 
+ref_protein <- file.path(system.file("mock-db/protein.faa", package = "UVMProteomics"))
+
+#path to bin in blast suit
+ncbi_bin <- "/Applications/ncbi-blast-2.14.0+/bin"
+
+#input data sheet
+input_path <- file.path(system.file(package = 'UVMProteomics', 'mock-db/mock-db-testFile.xlsx'))
+
+run_motif_extraction(input_path, output_directory_path, ncbi_bin, ref_protein)
+
+```
