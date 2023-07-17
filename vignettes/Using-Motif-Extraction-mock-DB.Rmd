@@ -18,23 +18,25 @@ knitr::opts_chunk$set(
 library(UVMProteomics)
 ```
 
-> This document will only work if NCBI Blast+ is installed. 
+> This document will only work if NCBI Blast+ is installed and the path is provided.
 
 ```{r}
 # Create a temp output directory
 output_directory_path_top <- tempdir()
-output_directory_path <- file.path(output_directory_path_top, 'Motif Extraction Test')
+output_directory_path <- file.path(output_directory_path_top, 'Motif_Extraction_Test')
 dir.create(output_directory_path, showWarnings = FALSE)
+
+output_file_path = capture.output(cat(paste0(output_directory_path, "/output.csv")))
 
 # Path to the protein sequence for the reference mouse database 
 ref_protein <- file.path(system.file("mock-db/protein.faa", package = "UVMProteomics"))
 
 #path to bin in blast suit
-ncbi_bin <- "/Applications/ncbi-blast-2.14.0+/bin"
+
+ncbi_bin <- "/my/local/ncbi-blast-2.10.1+/bin/"
 
 #input data sheet
 input_path <- file.path(system.file(package = 'UVMProteomics', 'mock-db/mock-db-testFile.xlsx'))
 
-run_motif_extraction(input_path, output_directory_path, ncbi_bin, ref_protein)
-
+test <- run_motif_extraction(input_path, output_file_path, ncbi_bin, ref_protein)
 ```
