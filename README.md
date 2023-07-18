@@ -53,6 +53,7 @@ build_blastdb.R
 formatter.R
 data_pull_and_fill.R
 run_blastdbcmd.R
+has_blast_plus_binaries.R
 ```
 
 ### Parameters
