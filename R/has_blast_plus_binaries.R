@@ -24,40 +24,4 @@ has_blast_plus_binaries <- function(){
 
   all_binaries_installed =  !all(checked_binaries %in% 'Not installed')
   print(paste("BlastDB Installed:", all_binaries_installed))
-<<<<<<< HEAD
 }
-
-system2(command = "echo", args = '$PATH')
-
-
-# Get the current PATH variable
-current_path <- Sys.getenv("PATH")
-
-# Add a new directory to the PATH
-new_directory <- "/Users/jaxlub/Downloads/ncbi-blast-2.14.0+/bin"
-updated_path <- paste(new_directory, current_path, sep = ":")
-
-# Set the updated PATH variable in the R session
-Sys.setenv(PATH = updated_path)
-
-
-
-
-
-
-
-
-
-
-# Retrieve the PATH variable from the environment
-path <- Sys.getenv("PATH")
-print(path)
-# Split the PATH into individual directories
-path_directories <- unlist(strsplit(path, ":"))
-print(path_directories)
-
-blast_path <- grep("ncbi-blast-2.14.0+", path_directories, value = TRUE)
-
-=======
-}
->>>>>>> 128774944773380f07bb457a9b68586eb88d52ac

@@ -12,7 +12,4 @@ TRUE/FALSE with attributes ncbi_bin, checked_binaries
 \description{
 Checks required BLAST+ binaries are in the PATH, or found with given path. This
 function returns a TRUE/FALSE for quick logic.
-<<<<<<< HEAD
-}
-=======
 }
