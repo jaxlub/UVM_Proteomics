@@ -20,6 +20,12 @@ library(UVMProteomics)
 
 > This document will only work if NCBI Blast+ is installed and the path is provided.
 
+```{r, include=F}
+knitr::opts_chunk$set(
+  eval = has_blast_plus_binaries()
+)
+```
+
 ```{r}
 # Create a temp output directory
 output_directory_path_top <- tempdir()
