@@ -21,6 +21,7 @@ library(UVMProteomics)
 > This document will only work if NCBI Blast+ is installed in the user PATH.
 
 > If NCBI Blast+ is not in your PATH run this with your path to ncbi-blast-2.14.0+/bin:
+
 ```{r, include=F}
 # Get the current PATH variable
 current_path <- Sys.getenv("PATH")
