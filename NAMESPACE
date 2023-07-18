@@ -3,6 +3,7 @@
 export(build_blastdb)
 export(data_pull_and_fill)
 export(file_reformater)
+export(has_blast_plus_binaries)
 export(run_blastdbcmd)
 export(run_motif_extraction)
 import(dplyr)
