@@ -4,16 +4,12 @@
 \alias{has_blast_plus_binaries}
 \title{Check BLAST+ installation}
 \usage{
-has_blast_plus_binaries(ncbi_bin = NULL)
-}
-\arguments{
-\item{ncbi_bin}{path to NCBI binaries if they are not in the PATH}
+has_blast_plus_binaries()
 }
 \value{
 TRUE/FALSE with attributes ncbi_bin, checked_binaries
 }
 \description{
 Checks required BLAST+ binaries are in the PATH, or found with given path. This
-function returns a TRUE/FALSE for quick logic, and is otherwise paired with
-\code{\link[=check_blast_plus_installation]{check_blast_plus_installation()}} for detailed messaging.
+function returns a TRUE/FALSE for quick logic.
 }

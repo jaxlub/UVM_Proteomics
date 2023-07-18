@@ -1,30 +1,16 @@
 #' Check BLAST+ installation
 #'
 #' Checks required BLAST+ binaries are in the PATH, or found with given path. This
-#' function returns a TRUE/FALSE for quick logic, and is otherwise paired with
-#' [rCRUX::check_blast_plus_installation()] for detailed messaging.
+#' function returns a TRUE/FALSE for quick logic.
 #'
-#' @param ncbi_bin path to NCBI binaries if they are not in the PATH
 #'
 #' @return TRUE/FALSE with attributes ncbi_bin, checked_binaries
 #'
 #' @export
-has_blast_plus_binaries <- function(ncbi_bin = NULL){
-
-  # A list to reference binary names
+has_blast_plus_binaries <- function(){
   binaries_to_check <-
     list(blastn = "blastn",
          blastdbcmd = "blastdbcmd")
-
-  # Add binary paths if they are given, otherwise we expect them in the PATH
-  if (!is.null(ncbi_bin)){
-    binaries_to_check <-
-      lapply(binaries_to_check, function(binary){
-        file.path(ncbi_bin, binary)
-      })
-  }
-  # -version prints 2 lines, version + build, select only version
-  # return 'Not installed' if binary cannot be run
   checked_binaries <-
     c(
       blastn =
@@ -37,11 +23,37 @@ has_blast_plus_binaries <- function(ncbi_bin = NULL){
     )
 
   all_binaries_installed =  !all(checked_binaries %in% 'Not installed')
-
-  structure(
-    all_binaries_installed,
-    ncbi_bin = ncbi_bin,
-    checked_binaries = checked_binaries
-  )
-
+  print(paste("BlastDB Installed:", all_binaries_installed))
 }
+
+system2(command = "echo", args = '$PATH')
+
+
+# Get the current PATH variable
+current_path <- Sys.getenv("PATH")
+
+# Add a new directory to the PATH
+new_directory <- "/Users/jaxlub/Downloads/ncbi-blast-2.14.0+/bin"
+updated_path <- paste(new_directory, current_path, sep = ":")
+
+# Set the updated PATH variable in the R session
+Sys.setenv(PATH = updated_path)
+
+
+
+
+
+
+
+
+
+
+# Retrieve the PATH variable from the environment
+path <- Sys.getenv("PATH")
+print(path)
+# Split the PATH into individual directories
+path_directories <- unlist(strsplit(path, ":"))
+print(path_directories)
+
+blast_path <- grep("ncbi-blast-2.14.0+", path_directories, value = TRUE)
+

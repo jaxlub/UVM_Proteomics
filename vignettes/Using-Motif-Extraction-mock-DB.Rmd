@@ -37,9 +37,11 @@ output_file_path = capture.output(cat(paste0(output_directory_path, "/output.csv
 # Path to the protein sequence for the reference mouse database 
 ref_protein <- file.path(system.file("mock-db/protein.faa", package = "UVMProteomics"))
 
-#path to bin in blast suit
-
-ncbi_bin <- "/my/local/ncbi-blast-2.10.1+/bin/"
+# Retrieve the NCBI Blast path from PATH variable of environment
+path <- Sys.getenv("PATH")
+path_directories <- unlist(strsplit(path, ":"))
+ncbi_bin <- grep("ncbi-blast-2.14.0+", path_directories, value = TRUE)
+#ncbi_bin <- "$PATH/ncbi-blast-2.10.1+/bin/"
 
 #input data sheet
 input_path <- file.path(system.file(package = 'UVMProteomics', 'mock-db/mock-db-testFile.xlsx'))
