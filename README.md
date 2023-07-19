@@ -29,7 +29,7 @@ Protein Expression:
 Package can be installed from github via
 ```R
 install.packages("devtools")
-devtools::install_github("UVM_Proteomics",username="jaxlub")
+devtools::install_github('jaxlub/UVM_Proteomics')
 ```
 Another download option is to download a zip file from github, unzip it and then run
 ```R
