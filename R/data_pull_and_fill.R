@@ -19,7 +19,7 @@ data_pull_and_fill <- function(input_file, ref_protein, ncbi_bin, num=7) {
   for (row in rownames(expand)){
 
     sequence <- run_blastdbcmd(query_row = expand[row, ], db = ref_protein, ncbi_bin)
-    expand <- expand %>% mutate(extracted_sequence = ifelse(row_number() == row, sequence, extracted_sequence))
+    expand <- expand %>% mutate(extracted_sequence = ifelse(row_number(expand) == row, sequence, extracted_sequence))
     expand <- expand %>% mutate(extracted_sequence = ifelse(nchar(extracted_sequence) < size,
                                                             paste0(extracted_sequence, strrep("X", size - nchar(extracted_sequence))),
                                                             extracted_sequence))
